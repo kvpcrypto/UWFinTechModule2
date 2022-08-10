@@ -10,6 +10,8 @@ import sys
 import fire
 import questionary
 from pathlib import Path
+#Import csv to write qualifying loans into csv 
+import csv
 
 from qualifier.utils.fileio import load_csv
 
@@ -110,6 +112,50 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+
+#integrate new function named "save_csv" that uses csv library to save the qualifying data as a file
+    def save_csv(save_csvpath):
+        save_csvpath = Path(save_csvpath)
+        with open(save_csvpath, 'w', newline='') as g:
+            csvwriter = csv.writer(g)
+            for loan in qualifying_loans:
+                csvwriter.writerow(loan)
+
+    #If no qualifying loans exists, tell user and exit
+
+    if len(qualifying_loans) == 0:
+        sys.exit("Sorry, there are no qualifying loans for you.")
+
+    #If there are qualifying loans, prompt the user to either save results as a CSV file or not
+   
+    elif len(qualifying_loans) > 0:
+        print(f"You have {len(qualifying_loans)} qualifying loans!")
+        to_save_or_not = questionary.confirm("Would you like to save a list of your qualifying loans?").ask()
+        
+        #if user opts to save list, write list of qualifying loans to a csv file
+
+        if to_save_or_not == True:
+            
+            save_csvpath = questionary.text("Enter a new output file path with name to save qualifying loans (name.csv):").ask()
+            save_csv(save_csvpath)
+            sys.exit("List of qualifying loans has been saved.")
+        
+        #if user opts to not save list, affirm user choice and exit
+
+        elif to_save_or_not == False:
+            sys.exit("Okay, list of qualifying loans will not be saved.")
+
+       
+
+    """Saves the CSV file from path provided.
+
+    Args:
+        csvpath (Path): The CSV file path.
+        data (list of lists): A list of the rows of data for the CSV file.
+        header (list): An optional header for the CSV.
+
+    """
+
 
 
 def run():
