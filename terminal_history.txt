@@ -1,0 +1,50 @@
+  140  git status
+  141  cd ls
+  142  list
+  143  cd list
+  144  cd '/c/Users/phamk/OneDrive/Desktop/UW FinTech Bootcamp/Modules/Module 2/UWFinTechModule2'
+  145  git status
+  146  git status
+  147  git add Starter_Code
+  148  git status
+  149  git commit -m "<Adding project files to github repo>"
+  150  git status
+  151  git push
+  152  cd ..
+  153  conda env lis
+  154  conda env list
+  155  conda deactivate
+  156  conda activate atmdev
+  157  conda deactivate
+  158  conda activate dev
+  159  cd'/c/Users/phamk/OneDrive/Desktop/UW FinTech Bootcamp/Modules/Module 2/UWFinTechModule2'
+  160  cd '/c/Users/phamk/OneDrive/Desktop/UW FinTech Bootcamp/Modules/Module 2/UWFinTechModule2'
+  161  git status
+  162  app.py
+  163  git status
+  164  cd Desktop
+  165  cd 'Desktop'
+  166  conda deactivate
+  167  conda activate dev
+  168  git status
+  169  git add C:\Users\phamk\OneDrive\Desktop\UW FinTech Bootcamp\Modules\Module 2\UWFinTechModule2\Starter_Code\loan_qualifier_app\data\saved_list.csv
+  170  git commit -m "Added save_csv function and updated CLI for save_qualifying_loans function. Saved_list.csv was the result of using credit score 750, monthly dept of 1000, monthly income 4000, loan amount 10000, home value 50000, and confirming to save list"
+  171  git add Starter_Code/loan_qualifier_app/data/saved_list.csv
+  172  git push
+  173  git status
+  174  git commit -m "Cleaned up comments and adjusted spacing of codes"
+  175  git push
+  176  git status
+  177  git add Starter_Code/loan_qualifier_app/app.py
+  178  git status
+  179  git commit -m "Cleaned up comments and added spacing between codes. Added save_csv function and updated CLI for save_qualifying_loans function. Saved_list.csv was the result of using credit score 750, monthly dept of 1000, monthly income 4000, loan amount 10000, home value 50000, and confirming to save list."
+  180  git push
+  181  git status
+  182  git add README.md
+  183  git status
+  184  git add Starter_Code/loan_qualifier_app/README.md
+  185  git commit -m "Updated README.md"
+  186  git push
+  187  history 50 terminal_history.txt
+  188  history terminal_history.txt
+  189  history 50 > terminal_history.txt
